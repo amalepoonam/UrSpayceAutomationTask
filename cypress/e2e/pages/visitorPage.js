@@ -1,18 +1,18 @@
 export class visitorPage {
     verifyVisitorInformationField() {
-        cy.get('.bg-light > span').should('contain', 'Visitor Information');
+        cy.get("div[class='bg-light mb-3'] span").should('contain', 'Visitor Information');
     }
     enterVistorFullName() {
-        return cy.get('.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c1205077789-0.mdc-text-field--outlined.mdc-text-field--no-label');
+        return cy.get("[placeholder='Enter Full Name']");
     }
     enterVisitorEmailAddress() {
-        return cy.get(':nth-child(2) > :nth-child(2) > div[_ngcontent-ng-c3413909703=""] > .mat-mdc-form-field > .mat-mdc-text-field-wrapper')
+        return cy.get("[placeholder='Enter Email Id']");
     }
     enterVisitorVisitorPhoneNo() {
         return cy.get('#adsasd')
     }
     selectVisitorGender() {
-        cy.get(':nth-child(3) > :nth-child(2) > div[_ngcontent-ng-c3413909703=""] > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').as('gender')
+        cy.get('#mat-select-value-1').as('gender')
         cy.get('@gender').click().should('be.visible')
         // select gender
         cy.get('#mat-option-1').click().should('contain', 'Female')
@@ -20,20 +20,20 @@ export class visitorPage {
 
     }
     visitingPurpose() {
-        return cy.get(':nth-child(4) > .col-md-6.ng-star-inserted > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').click({ force: true })
+        return cy.get('#mat-select-value-3').click({ force: true })
 
     }
     searchHostName() {
-        return cy.get('.ng-invalid > .mat-mdc-form-field > .mat-mdc-text-field-wrapper')
+        return cy.get('#mat-input-3')
 
     }
     selectDepartment() {
-        return cy.get(':nth-child(5) > :nth-child(1) > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').click({ force: true })
+        return cy.get('#mat-select-value-5').click({ force: true })
 
 
     }
     selectDesignation() {
-        cy.get('.mat-mdc-form-field-infix.ng-tns-c1205077789-12').as('designation')
+        cy.get('#mat-select-value-7').as('designation')
         cy.get('@designation').click();
         cy.get('#mat-option-29').click();
 
@@ -50,12 +50,12 @@ export class visitorPage {
 
     }
     setMeetingDuration() {
-        cy.get(':nth-child(8) > :nth-child(3) > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').click();
+        cy.get('#mat-select-value-9').click();
         cy.get('#mat-option-7').click()
     }
     setTemperature() {
         cy.get('#mat-input-6').should('have.attr', 'placeholder', 'Enter Temperature');
-        cy.get(':nth-child(9) > :nth-child(1) > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').type('30°C')
+        return cy.get("[placeholder='Enter Temperature']").type('97')
     }
     selectNoOfpeople() {
         cy.get('#mat-input-7').should('have.attr', 'placeholder', 'Enter No of People');
@@ -70,5 +70,9 @@ export class visitorPage {
     }
    clickToSendRequest(){
     cy.get('.text-white').click();
+   }
+   clickToCancelButton(){
+    cy.get('.mr-3.btn-cancle').click();  
+    cy.get('h2')
    }
 }

@@ -1,11 +1,11 @@
 import { visitorPage } from "./pages/visitorPage";
 describe('Visitor Form verification',()=>{
+    const  vp=new visitorPage();
 
     beforeEach(() => {
         cy.visit("https://stagevisitor.urspayce.com/new-visitor/641d80d7f97c654aaa1bb741")
     })
     it("Verify the home page functionality with valid data", () => {
-         const  vp=new visitorPage();
          vp.verifyVisitorInformationField();
          vp.enterVistorFullName().type('ABC');
          vp.enterVisitorEmailAddress().type('test@example.com');
@@ -25,6 +25,9 @@ describe('Visitor Form verification',()=>{
 
 
     })
-    it("")
+    it.skip("cancel Button functionality ",()=>{
+        vp.clickToCancelButton();
+
+    })
 
 })
