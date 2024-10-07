@@ -55,24 +55,46 @@ export class visitorPage {
     }
     setTemperature() {
         cy.get('#mat-input-6').should('have.attr', 'placeholder', 'Enter Temperature');
-        return cy.get("[placeholder='Enter Temperature']").type('97')
-    }
+        return cy.get("[placeholder='Enter Temperature']").type('99')
+        }
+
     selectNoOfpeople() {
         cy.get('#mat-input-7').should('have.attr', 'placeholder', 'Enter No of People');
-        cy.get(':nth-child(9) > :nth-child(2) > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').type('10')
+        cy.get("[placeholder='Enter No of People']").type('10')
     }
     selectVaccinationDose() {
-        cy.get(':nth-child(9) > :nth-child(3) > .mat-mdc-form-field > .mat-mdc-text-field-wrapper').click();
-        cy.get('#mat-option-12 > .mdc-list-item__primary-text').click();
+        cy.get('#mat-select-value-11').click();
+        cy.get('#mat-option-12').click();
     }
     setPrivateNote() {
-        return cy.get('.col-md-12 > .mat-mdc-form-field > .mat-mdc-text-field-wrapper')
+        return cy.get("[placeholder='Leave private note']")
     }
    clickToSendRequest(){
-    cy.get('.text-white').click();
+    cy.get("[type='submit']").click();
    }
    clickToCancelButton(){
-    cy.get('.mr-3.btn-cancle').click();  
-    cy.get('h2')
+    cy.get('.mr-3.btn-cancle').click();
+const expectedText="Welcome to Visitor Management System"
+cy.get("div[class='card'] h2").then(($el) => {
+    const actualText = $el.text().replace(/\s+/g, ' ').trim();  // Normalize spaces
+    expect(actualText).to.equal(expectedText.trim());  // Expected text trimmed
+  });
+   }
+   ErrorMessageInvalidName(){
+    const expectedText= "Name is not valid"
+    cy.get(':nth-child(1) > div[_ngcontent-ng-c3413909703=""] > .mat-mdc-form-field > .mat-mdc-form-field-subscript-wrapper > .mat-mdc-form-field-error-wrapper').then(($el) => {
+    const actualText = $el.text().replace(/\s+/g, ' ').trim();  // Normalize spaces
+    expect(actualText).to.equal(expectedText.trim());  // Expected text trimmed
+  });
+   
+   }
+   ErrorMessageInvalidEmail(){
+    const expectedText= "Please provide a valid email address"
+    cy.get(':nth-child(2) > div[_ngcontent-ng-c3413909703=""] > .mat-mdc-form-field > .mat-mdc-form-field-subscript-wrapper > .mat-mdc-form-field-error-wrapper').then(($el) => {
+    const actualText = $el.text().replace(/\s+/g, ' ').trim();  // Normalize spaces
+    expect(actualText).to.equal(expectedText.trim());  // Expected text trimmed
+  });
+   
    }
 }
+// Example: Validate using custom logic with .then()
