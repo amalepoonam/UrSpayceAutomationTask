@@ -1,5 +1,17 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "product": "G-Shock GM-2100G-1A9DR Gold IP Black Analog-Digital Dial Black Resin Strap Men's Watch Shock and 200M Water Resistant G1278",
+  "productTitleAmazon": "Casio G-Shock",
+  "price": "",
+  "emailId":"test@yopmail.com",
+  "password":"test@123",
+  "mensProductName":"Catch Straight Leg Jean",
+  "productPrice": "$159.00",
+  "firstName":"Joe",
+  "nameOnCard":"xyz",
+  "cardType":"Visa",
+  "cardNumber":"4111111111111111",
+  "cardMonth":"12",
+  "cardYear":"30",
+  "cvv":"567",
+"name":"Poonam"
 }

@@ -1,0 +1,12 @@
+{
+    "searchBox":"#twotabsearchtextbox",
+    "searchIcon":"#nav-search-submit-button",
+    "addToCartAmazon":"#add-to-cart-button",
+    "warrantyPopUp" :"#attach-warranty-pane",
+    "skipButton" :"#attachSiNoCoverage",
+    "seachFlipcartBox":".Pke_EE",
+    "searchIconFlipCart": "._2iLD__",
+    "searchResultsList":".rush-component.s-latency-cf-section",
+    "prodName"          :".a-size-base-plus.a-color-base.a-text-normal",
+    "productTileSection" :".a-section.a-spacing-base.a-text-center"
+}

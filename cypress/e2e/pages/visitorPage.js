@@ -41,7 +41,7 @@ export class visitorPage {
     SetVisitingDate() {
         const date = "15";
         const year = "2024";
-        const desireMonth = "OCT";
+        const desireMonth = "NOV";
         cy.get('#mat-input-4').click();
         cy.get('.mdc-button__label > span').click();
         cy.get('.mat-calendar-content').contains(year).click();

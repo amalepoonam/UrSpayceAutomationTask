@@ -1,0 +1,34 @@
+{
+    "logo":".theLogo",
+    "searchBox":"input[name='searchstring']",
+    "searchBoxIcon":"[valign='middle'] > a",
+    "basketIcon":".pfCurrentItems:nth-child(1)",
+    "emptyCartMessage":"h3",
+    "emailAddress":"input[name='login']",
+    "password":"input[name='password']",
+    "signIn":".loginButton",
+    "menSection":"#menu-3-top",
+    "denims":"#menu-3-1",
+    "productPrice":".prodPrice",
+    "productQuantityBox":"input[name='quantity']",
+    "addToBasket":"b > img",
+    "nextStepButton" :"#cartLinkCheckOut",
+    "editDetails":"cartLinkChangeDetails",
+    "firstName":"input[name='72_0']",
+    "saveAndContinueBtn":":nth-child(8) > [width='60%'] > input",
+    "promocodeBox":"input[name='promocode']",
+    "useCode":"img[src='http://training.inside.tm/www/1199/files/2014-button-apply-code.png",
+    "popUp":"#PFPopUp_button",
+    "nameOnCard":"input[name='creditCardName']",
+    "cardType":"select[name='creditCardtype']",
+    "cardNumber":"input[name='creditCard1']",
+    "cardExpiryMonth":"input[name='exdate1']",
+    "cardExpiryYear":"input[name='exdate2']",
+    "cvvNumBox":"input[name='cvvNum']",
+    "completeAndPayBox":"#cartLinkCheckOut > b > img",
+    "successMsg":"#cartCellTop"
+  
+
+
+    
+}
